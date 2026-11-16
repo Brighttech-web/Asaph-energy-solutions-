@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Asaph Energy Solutions provides professional solar energy systems, installations, inverters and renewable energy solutions.">
+    <meta name="theme-color" content="#071d35">
+
+    <title>Asaph Energy Solutions | Powering Your Future</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #071d35;
+            --navy-light: #102e4d;
+            --green: #25b76a;
+            --green-dark: #159653;
+            --white: #ffffff;
+            --light: #f4f8f6;
+            --text: #536273;
+            --heading: #10243b;
+            --border: #e6ece9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--heading);
+            line-height: 1.25;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+            background: var(--navy);
+            color: #dce8ef;
+            padding: 9px 0;
+            font-size: 12px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--green);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .logo-text h2 {
+            font-size: 17px;
+            color: var(--navy);
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: var(--green-dark);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-links .contact-btn {
+            background: var(--green);
+            color: white;
+            padding: 12px 21px;
+            border-radius: 5px;
+        }
+
+        .nav-links .contact-btn:hover {
+            background: var(--green-dark);
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 620px;
+            background:
+                linear-gradient(90deg, rgba(4,20,38,0.94), rgba(4,20,38,0.55)),
+                url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85');
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            padding: 100px 0;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: #8df0b8;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: clamp(36px, 5.5vw, 65px);
+            margin-bottom: 25px;
+            line-height: 1.16;
+        }
+
+        .hero h1 span {
+            color: #42d68a;
+        }
+
+        .hero p {
+            color: #e0e8ef;
+            max-width: 590px;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 27px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* INTRODUCTION */
+
+        .intro {
+            padding: 90px 0;
+            background: white;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .experience-box {
+            position: absolute;
+            bottom: 25px;
+            right: -20px;
+            background: var(--green);
+            color: white;
+            padding: 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .experience-box strong {
+            font-size: 28px;
+            display: block;
+        }
+
+        .section-label {
+            color: var(--green-dark);
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-heading {
+            font-size: clamp(27px, 4vw, 40px);
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .text-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--green-dark);
+            font-weight: 800;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--light);
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header p {
+            margin-top: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 28px;
+            border-radius: 9px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border-color: var(--green);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 10px;
+            background: #e8f8ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-size: 19px;
+            margin-bottom: 13px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .service-card a {
+            color: var(--green-dark);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* WHY CHOOSE US */
+
+        .why-us {
+            padding: 95px 0;
+            background: var(--navy);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .why-us h2 {
+            color: white;
+        }
+
+        .why-us p {
+            color: #bdcbd8;
+        }
+
+        .why-list {
+            margin-top: 30px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .check {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            background: var(--green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+        }
+
+        .why-item h3 {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .why-item p {
+            font-size: 13px;
+        }
+
+        .why-image img {
+            height: 440px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            padding: 90px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 22px;
+            background: white;
+        }
+
+        .project-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            font-size: 13px;
+        }
+
+        /* CALL TO ACTION */
+
+        .cta {
+            padding: 75px 0;
+            background:
+                linear-gradient(rgba(6,29,53,0.92), rgba(6,29,53,0.92)),
+                url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1500&q=80');
+
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: clamp(27px, 4vw, 40px);
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            color: #d4e0e9;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #041426;
+            padding: 70px 0 20px;
+            color: #bdcbd8;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        footer p, footer a {
+            color: #bdcbd8;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .footer-links a:hover {
+            color: var(--green);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #20364b;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        /* WHATSAPP BUTTON */
+
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media(max-width: 900px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 700px) {
+            .topbar-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 82px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 5% 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 13px 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links .contact-btn {
+                text-align: center;
+                margin-top: 12px;
+            }
+
+            .hero {
+                min-height: 560px;
+                background-position: 60% center;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .intro-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .intro-image img,
+            .why-image img {
+                height: 320px;
+            }
+
+            .experience-box {
+                right: 10px;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media(max-width: 420px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .logo-text h2 {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP INFORMATION BAR -->
+
+    <div class="topbar">
+        <div class="container topbar-content">
+            <span>Reliable Solar Energy Solutions</span>
+            <span>Powering Homes, Businesses & Industries</span>
+        </div>
+    </div>
+
+
+    <!-- HEADER AND NAVIGATION -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">A</div>
+
+                <div class="logo-text">
+                    <h2>ASAPH ENERGY</h2>
+                    <span>SOLUTIONS</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="projects.html">Projects</a>
+
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO / MAIN BANNER -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    Welcome to Asaph Energy Solutions
+                </span>
+
+                <h1>
+                    Powering Your World With
+                    <span>Clean Energy.</span>
+                </h1>
+
+                <p>
+                    Discover dependable solar energy solutions designed
+                    to provide reliable electricity, reduce energy costs
+                    and create a brighter, more sustainable future.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="services.html" class="btn btn-primary">
+                        Explore Our Services →
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT INTRODUCTION -->
+
+    <section class="intro">
+
+        <div class="container intro-grid">
+
+            <div class="intro-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Solar panels installed for renewable energy">
+
+                <div class="experience-box">
+                    <strong>Clean</strong>
+                    Energy For Tomorrow
+                </div>
+
+            </div>
+
+
+            <div class="intro-text">
+
+                <div class="section-label">Who We Are</div>
+
+                <h2 class="section-heading">
+                    Building A Better Future Through Solar Energy
+                </h2>
+
+                <p>
+                    At Asaph Energy Solutions, we believe that access
+                    to reliable electricity should not be a luxury.
+                    We are focused on providing practical and dependable
+                    renewable energy solutions.
+                </p>
+
+                <p>
+                    Our goal is to help homes, businesses and organisations
+                    enjoy reliable power through quality solar products,
+                    professional installation and dependable support.
+                </p>
+
+                <p>
+                    We are committed to making clean energy more accessible
+                    through innovative solutions and customer-focused service.
+                </p>
+
+                <a href="about.html" class="text-link">
+                    Discover More About Us →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="services">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-label">What We Do</div>
+
+                <h2 class="section-heading">
+                    Our Energy Solutions
+                </h2>
+
+                <p>
+                    We provide a range of solar and electrical solutions
+                    designed to meet different energy needs.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">☀️</div>
+
+                    <h3>Solar Panel Systems</h3>
+
+                    <p>
+                        Solar panel solutions designed to convert sunlight
+                        into dependable electricity for homes and businesses.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🔋</div>
+
+                    <h3>Inverter & Battery Systems</h3>
+
+                    <p>
+                        Energy storage and inverter solutions designed
+                        to support electricity needs when grid power
+                        is unavailable.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">⚡</div>
+
+                    <h3>Solar Installation</h3>
+
+                    <p>
+                        Professional installation services for solar
+                        energy systems, with attention to quality
+                        and performance.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🏢</div>
+
+                    <h3>Commercial Solar Solutions</h3>
+
+                    <p>
+                        Energy solutions for offices, shops and
+                        commercial facilities seeking dependable power.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🔧</div>
+
+                    <h3>Maintenance & Support</h3>
+
+                    <p>
+                        Maintenance and technical support to help
+                        solar energy systems operate effectively.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">💡</div>
+
+                    <h3>Energy Consultation</h3>
+
+                    <p>
+                        Guidance on choosing suitable energy systems
+                        based on electricity requirements and budgets.
+                    </p>
+
+                    <a href="services.html">Learn More →</a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us">
+
+        <div class="container why-grid">
+
+
+            <div>
+
+                <div class="section-label">Why Choose Asaph?</div>
+
+                <h2 class="section-heading">
+                    Energy Solutions You Can Depend On
+                </h2>
+
+                <p>
+                    We understand the importance of reliable electricity.
+                    Our approach focuses on providing practical solutions
+                    that meet the energy requirements of our customers.
+                </p>
+
+
+                <div class="why-list">
+
+
+                    <div class="why-item">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Quality Products</h3>
+
+                            <p>
+                                We aim to provide dependable solar
+                                equipment and energy products.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Customer-Focused Service</h3>
+
+                            <p>
+                                We prioritise understanding customers'
+                                needs before recommending solutions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Practical Energy Solutions</h3>
+
+                            <p>
+                                We focus on energy systems suitable
+                                for different applications and budgets.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-item">
+
+                        <div class="check">✓</div>
+
+                        <div>
+
+                            <h3>Technical Support</h3>
+
+                            <p>
+                                We value proper guidance, installation
+                                and ongoing customer support.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="why-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1000&q=85"
+                    alt="Solar energy panels in the sunlight">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects">
+
+        <div class="container">
+
+
+            <div class="section-header">
+
+                <div class="section-label">Our Work</div>
+
+                <h2 class="section-heading">
+                    Explore Our Projects
+                </h2>
+
+                <p>
+                    Discover the possibilities of modern solar energy
+                    solutions for residential and commercial applications.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=80"
+                        alt="Solar panels">
+
+                    <div class="project-info">
+
+                        <h3>Residential Solar Systems</h3>
+
+                        <p>
+                            Energy solutions designed for modern homes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80"
+                        alt="Renewable energy infrastructure">
+
+                    <div class="project-info">
+
+                        <h3>Commercial Energy Solutions</h3>
+
+                        <p>
+                            Solar energy applications for businesses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80"
+                        alt="Solar panel installation">
+
+                    <div class="project-info">
+
+                        <h3>Renewable Energy Systems</h3>
+
+                        <p>
+                            Sustainable energy for a brighter future.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div style="text-align:center; margin-top:40px;">
+
+                <a href="projects.html" class="btn btn-primary">
+                    View All Projects →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Ready To Make The Switch To Solar?
+            </h2>
+
+            <p>
+                Let us help you find an energy solution that fits
+                your needs. Get in touch with Asaph Energy Solutions
+                today and take the next step towards reliable power.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Contact Our Team →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <h2>ASAPH ENERGY SOLUTIONS</h2>
+
+                    <p>
+                        Providing practical solar energy solutions
+                        for homes, businesses and organisations.
+                        Powering a brighter and more sustainable future.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">Home</a>
+
+                        <a href="about.html">About Us</a>
+
+                        <a href="services.html">Services</a>
+
+                        <a href="projects.html">Projects</a>
+
+                        <a href="contact.html">Contact</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Our Services</h3>
+
+                    <div class="footer-links">
+
+                        <a href="services.html">Solar Panels</a>
+
+                        <a href="services.html">Inverters</a>
+
+                        <a href="services.html">Battery Systems</a>
+
+                        <a href="services.html">Installation</a>
+
+                        <a href="services.html">Maintenance</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Contact Information</h3>
+
+                    <div class="footer-links">
+
+                        <a href="contact.html">Contact Us</a>
+
+                        <a href="contact.html">Request A Quote</a>
+
+                        <a href="contact.html">Customer Support</a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="year"></span> Asaph Energy Solutions.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    Powering Your Future With Clean Energy.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+
+    <!-- Replace 234XXXXXXXXXX with the company's WhatsApp number -->
+
+    <a
+        href="https://wa.me/234XXXXXXXXXX"
+        class="whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp">
+
+        ☎
+
+    </a>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // Mobile navigation menu
+
+        const menuToggle = document.getElementById("menuToggle");
+
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+            menuToggle.textContent =
+                navLinks.classList.contains("active") ? "✕" : "☰";
+
+        });
+
+
+        // Close menu after clicking a navigation link
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+
+        // Automatically update copyright year
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
