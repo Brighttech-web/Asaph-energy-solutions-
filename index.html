@@ -1,390 +1,242 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Asaph Energy Solutions | Home</title>
+    <title>Asaph Energy Solutions | Reliable Energy Solutions</title>
 
-    <meta name="description" content="Asaph Energy Solutions provides modern and reliable energy solutions for homes and businesses.">
+    <meta name="description" content="Asaph Energy Solutions provides practical solar energy solutions for homes, businesses and organisations.">
 
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #172638;
-            background: #ffffff;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #071d35;
-            color: white;
-            padding: 18px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .logo span {
-            color: #f5b82e;
-        }
-
-        nav {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: #f5b82e;
-        }
-
-        .hero {
-            min-height: 570px;
-            padding: 90px 7%;
-            display: flex;
-            align-items: center;
-            background:
-                linear-gradient(90deg, rgba(3,20,38,.92), rgba(3,20,38,.48)),
-                url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85")
-                center/cover no-repeat;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 650px;
-        }
-
-        .tag {
-            color: #f5b82e;
-            font-weight: bold;
-            letter-spacing: 2px;
-            font-size: 13px;
-            margin-bottom: 18px;
-        }
-
-        .hero h1 {
-            font-size: clamp(38px, 6vw, 60px);
-            line-height: 1.15;
-            margin-bottom: 22px;
-        }
-
-        .hero h1 span {
-            color: #f5b82e;
-        }
-
-        .hero p {
-            font-size: 17px;
-            max-width: 540px;
-            margin-bottom: 30px;
-            color: #e5edf5;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 27px;
-            background: #f5b82e;
-            color: #071d35;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: .3s;
-        }
-
-        .btn:hover {
-            background: white;
-        }
-
-        .intro {
-            padding: 75px 7%;
-            text-align: center;
-            max-width: 1050px;
-            margin: auto;
-        }
-
-        .section-tag {
-            color: #d99b13;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .intro h2,
-        .services h2 {
-            font-size: 34px;
-            color: #071d35;
-            margin-bottom: 18px;
-        }
-
-        .intro p {
-            color: #64748b;
-            font-size: 16px;
-        }
-
-        .services {
-            padding: 65px 7%;
-            background: #f4f7fa;
-            text-align: center;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 35px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px 22px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.05);
-        }
-
-        .service-card .symbol {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            color: #071d35;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        .more-services {
-            margin-top: 35px;
-        }
-
-        .contact-banner {
-            padding: 65px 7%;
-            text-align: center;
-            background: #071d35;
-            color: white;
-        }
-
-        .contact-banner h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .contact-banner p {
-            color: #dce5ee;
-            margin-bottom: 25px;
-        }
-
-        footer {
-            background: #041426;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 25px 7%;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            nav {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
-
-            .hero {
-                min-height: 500px;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .intro h2,
-            .services h2 {
-                font-size: 28px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo">
-            ASAPH <span>ENERGY</span>
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-main">ASAPH ENERGY</span>
+            <span class="logo-sub">SOLUTIONS</span>
+        </a>
+
+        <details class="menu">
+            <summary class="menu-toggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </details>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    ASAPH ENERGY SOLUTIONS
+                </p>
+
+                <h1>
+                    Reliable Energy.<br>
+                    <span>Brighter Futures.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Practical solar energy solutions
+                    for homes, businesses and
+                    organisations.
+                </p>
+
+                <a href="services.html" class="primary-button">
+                    EXPLORE OUR SERVICES
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="introduction">
+
+            <div class="section-label">
+                <span></span>
+                POWERING WHAT MATTERS
+                <span></span>
+            </div>
+
+            <h2>
+                Energy solutions<br>
+                built around you
+            </h2>
+
+            <p>
+                At Asaph Energy Solutions, we are
+                committed to providing reliable,
+                modern and sustainable energy
+                solutions that meet your needs.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURED SERVICES -->
+        <section class="featured-services">
+
+            <div class="services-heading">
+                <p>OUR EXPERTISE</p>
+                <h2>What We Do</h2>
+            </div>
+
+            <div class="service-grid">
+
+                <!-- SERVICE 1 -->
+                <a href="services.html#solar" class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             stroke="currentColor"
+                             stroke-width="3"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <circle cx="32" cy="12" r="7"/>
+                            <path d="M32 1v4 M15 12h-4 M53 12h-4"/>
+                            <path d="M9 29h46l-6 23H15z"/>
+                            <path d="M32 29v23 M18 40h28 M21 29l-3 23 M43 29l3 23"/>
+                            <path d="M32 52v7 M23 59h18"/>
+
+                        </svg>
+                    </div>
+
+                    <h3>Solar Panels</h3>
+
+                </a>
+
+
+                <!-- SERVICE 2 -->
+                <a href="services.html#inverters" class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             stroke="currentColor"
+                             stroke-width="3"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <rect x="9" y="8" width="46"
+                                  height="43" rx="6"/>
+
+                            <path d="M35 17L24 32h9l-4 11 12-16h-9z"/>
+
+                            <path d="M19 56v-5 M45 56v-5"/>
+
+                        </svg>
+                    </div>
+
+                    <h3>Inverter Systems</h3>
+
+                </a>
+
+
+                <!-- SERVICE 3 -->
+                <a href="services.html#batteries" class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none"
+                             stroke="currentColor"
+                             stroke-width="3"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <rect x="12" y="12" width="40"
+                                  height="46" rx="6"/>
+
+                            <path d="M25 12V7h14v5"/>
+
+                            <path d="M36 21L25 37h9l-5 12 14-19h-9z"/>
+
+                        </svg>
+                    </div>
+
+                    <h3>Battery Storage</h3>
+
+                </a>
+
+            </div>
+
+            <div class="services-link">
+                <a href="services.html" class="secondary-button">
+                    VIEW ALL SERVICES →
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+        <section class="home-contact">
+
+            <p>LET'S WORK TOGETHER</p>
+
+            <h2>
+                Ready for a Brighter Energy Future?
+            </h2>
+
+            <a href="contact.html" class="primary-button">
+                GET IN TOUCH →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            ASAPH ENERGY SOLUTIONS
         </div>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
+        <p>
+            Providing practical solar energy solutions
+            for homes, businesses and organisations.
+        </p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-
-    <!-- HOMEPAGE HERO -->
-    <section class="hero">
-        <div class="hero-content">
-
-            <div class="tag">WELCOME TO ASAPH ENERGY SOLUTIONS</div>
-
-            <h1>
-                Powering a <span>Brighter</span> Future
-            </h1>
-
-            <p>
-                Discover reliable, innovative and sustainable
-                energy solutions designed to power homes,
-                businesses and communities.
-            </p>
-
-            <a href="services.html" class="btn">
-                Explore Our Services
-            </a>
-
-        </div>
-    </section>
-
-
-    <!-- SHORT INTRODUCTION -->
-    <section class="intro">
-
-        <div class="section-tag">WHO WE ARE</div>
-
-        <h2>Energy Solutions You Can Rely On</h2>
-
-        <p>
-            At Asaph Energy Solutions, we are focused on
-            providing dependable and modern energy solutions
-            that meet the needs of our customers.
-
-            Our commitment is to quality, reliability and
-            customer satisfaction.
-        </p>
-
-    </section>
-
-
-    <!-- FEATURED SERVICES -->
-    <section class="services">
-
-        <div class="section-tag">WHAT WE OFFER</div>
-
-        <h2>Our Featured Services</h2>
-
-        <p>
-            Discover some of the energy solutions we offer.
-        </p>
-
-        <div class="service-grid">
-
-            <div class="service-card">
-                <div class="symbol">☀️</div>
-                <h3>Solar Energy Solutions</h3>
-                <p>
-                    Modern solar energy solutions designed
-                    to provide dependable power.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="symbol">⚡</div>
-                <h3>Inverter Systems</h3>
-                <p>
-                    Reliable inverter solutions for homes
-                    and businesses.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="symbol">🔋</div>
-                <h3>Energy Storage</h3>
-                <p>
-                    Energy storage solutions to support
-                    dependable power supply.
-                </p>
-            </div>
-
         </div>
 
-        <div class="more-services">
-            <a href="services.html" class="btn">
-                View All Services
-            </a>
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT BANNER -->
-    <section class="contact-banner">
-
-        <h2>Let's Power Your Future</h2>
-
-        <p>
-            Have a project or need an energy solution?
-            Get in touch with us today.
-        </p>
-
-        <a href="contact.html" class="btn">
-            Contact Us
-        </a>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <p>
+        <div class="footer-bottom">
             &copy; 2026 Asaph Energy Solutions.
             All Rights Reserved.
-        </p>
+        </div>
 
-        <p>
-            Powering a Brighter Future.
+        <p class="footer-tagline">
+            Powering Your Future With Clean Energy.
         </p>
 
     </footer>
