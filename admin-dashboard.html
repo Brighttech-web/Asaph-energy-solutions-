@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Asaph Energy Solutions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f8;
+            color: #222;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #102c4e;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 18px;
+        }
+
+        .brand {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .brand h2 {
+            font-size: 25px;
+        }
+
+        .brand span {
+            color: #d4ad55;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #24466d;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 30px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+
+        .topbar h1 {
+            color: #102c4e;
+            font-size: 27px;
+        }
+
+        .admin-label {
+            background: #e8edf3;
+            color: #102c4e;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .welcome {
+            background: #102c4e;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #dce5ef;
+        }
+
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+        }
+
+        .card h3 {
+            color: #102c4e;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .card .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #c49a38;
+        }
+
+        .quick-actions {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .quick-actions h2 {
+            color: #102c4e;
+            margin-bottom: 20px;
+        }
+
+        .action-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .action-links a {
+            background: #102c4e;
+            color: white;
+            text-decoration: none;
+            padding: 13px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .action-links a:hover {
+            background: #c49a38;
+        }
+
+        .notice {
+            margin-top: 25px;
+            padding: 15px;
+            background: #fff4d6;
+            border-left: 4px solid #c49a38;
+            color: #624b16;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .brand {
+                margin-bottom: 15px;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            .dashboard-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <h2>ASAPH</h2>
+            <span>ENERGY SOLUTIONS</span>
+        </div>
+
+        <a href="admin-dashboard.html" class="active">Dashboard</a>
+        <a href="#">Projects</a>
+        <a href="#">Customer Messages</a>
+        <a href="#">Gallery</a>
+        <a href="#">Settings</a>
+        <a href="index.html">View Website</a>
+        <a href="admin-login.html">Logout</a>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="topbar">
+            <h1>Admin Dashboard</h1>
+            <span class="admin-label">Administrator</span>
+        </div>
+
+        <section class="welcome">
+            <h2>Welcome to Asaph Energy Solutions</h2>
+            <p>Manage your website and keep your business information organised.</p>
+        </section>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Projects</h3>
+                <div class="number">0</div>
+                <p>Projects added to the website</p>
+            </div>
+
+            <div class="card">
+                <h3>Customer Messages</h3>
+                <div class="number">0</div>
+                <p>Customer enquiries received</p>
+            </div>
+
+            <div class="card">
+                <h3>Gallery Images</h3>
+                <div class="number">0</div>
+                <p>Business project photos</p>
+            </div>
+
+            <div class="card">
+                <h3>Website Status</h3>
+                <div class="number">Active</div>
+                <p>Website management overview</p>
+            </div>
+
+        </section>
+
+        <section class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-links">
+                <a href="#">Manage Projects</a>
+                <a href="#">View Messages</a>
+                <a href="#">Manage Gallery</a>
+                <a href="#">Website Settings</a>
+            </div>
+
+        </section>
+
+        <div class="notice">
+            <strong>Development notice:</strong>
+            This is currently a dashboard design. Login protection,
+            database storage and management features have not yet
+            been connected.
+        </div>
+
+    </main>
+
+</body>
+</html>
