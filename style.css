@@ -1,9 +1,10 @@
 
-/* =====================================
+/* ==========================================
    ASAPH ENERGY SOLUTIONS
    COMPLETE WEBSITE STYLESHEET
-===================================== */
+========================================== */
 
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +17,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #263445;
     background: #fff;
+    color: #263445;
     line-height: 1.7;
 }
 
@@ -25,33 +26,37 @@ a {
     text-decoration: none;
 }
 
-/* HEADER */
+img {
+    display: block;
+    max-width: 100%;
+}
 
+/* HEADER */
 header {
-    height: 85px;
-    padding: 0 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    min-height: 85px;
+    padding: 15px 8%;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
 }
 
 .logo {
+    color: #071d35;
     font-size: 21px;
     font-weight: 800;
-    color: #071d35;
     line-height: 1.2;
     letter-spacing: 1px;
 }
 
 .logo span {
     display: block;
+    color: #d9a326;
     font-size: 11px;
     letter-spacing: 4px;
-    color: #d9a326;
 }
 
 .menu {
@@ -74,8 +79,8 @@ header {
     top: 48px;
     right: 0;
     width: 220px;
-    background: #fff;
     padding: 15px;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0,0,0,.12);
     display: flex;
@@ -84,8 +89,8 @@ header {
 }
 
 .menu nav a {
-    color: #071d35;
     padding: 9px;
+    color: #071d35;
     font-weight: 600;
     transition: .3s;
 }
@@ -96,14 +101,13 @@ header {
 }
 
 /* BUTTONS */
-
 .btn {
     display: inline-block;
-    padding: 13px 27px;
     background: #d9a326;
     color: #071d35;
-    font-weight: bold;
+    padding: 13px 27px;
     border-radius: 5px;
+    font-weight: bold;
     transition: .3s;
 }
 
@@ -113,18 +117,15 @@ header {
 }
 
 /* HOMEPAGE HERO */
-
 .hero {
     min-height: 570px;
+    padding: 80px 8%;
     display: flex;
     align-items: center;
-    padding: 80px 8%;
     color: #fff;
-
     background:
-        linear-gradient(rgba(4,20,38,.75), rgba(4,20,38,.75)),
+        linear-gradient(rgba(4,20,38,.76), rgba(4,20,38,.76)),
         url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85");
-
     background-size: cover;
     background-position: center;
 }
@@ -147,7 +148,6 @@ header {
 }
 
 /* HOMEPAGE INTRO */
-
 .intro {
     max-width: 1000px;
     margin: auto;
@@ -166,11 +166,10 @@ header {
 }
 
 /* HOMEPAGE SERVICES */
-
 .services-preview {
     padding: 80px 8%;
-    text-align: center;
     background: #f5f7fa;
+    text-align: center;
 }
 
 .services-preview h2 {
@@ -195,21 +194,20 @@ header {
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,.10);
 }
 
 .service-card h3 {
     color: #071d35;
-    margin-bottom: 12px;
     font-size: 21px;
+    margin-bottom: 12px;
 }
 
 .service-card p {
     color: #647184;
 }
 
-/* CALL TO ACTION */
-
+/* GENERAL CTA */
 .cta {
     background: #071d35;
     color: #fff;
@@ -223,12 +221,11 @@ header {
 }
 
 .cta p {
-    margin-bottom: 25px;
     color: #e0e5eb;
+    margin-bottom: 25px;
 }
 
 /* FOOTER */
-
 footer {
     background: #041426;
     color: #fff;
@@ -242,7 +239,6 @@ footer p {
 }
 
 /* ABOUT PAGE */
-
 .about-hero {
     background: #071d35;
     color: #fff;
@@ -331,7 +327,6 @@ footer p {
 }
 
 /* SERVICES PAGE */
-
 .services-hero {
     background:
         linear-gradient(rgba(4,20,38,.8), rgba(4,20,38,.8)),
@@ -395,12 +390,188 @@ footer p {
     margin-bottom: 25px;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* PROJECTS PAGE */
+.projects-hero {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(4,20,38,.78), rgba(4,20,38,.78)),
+        url("https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 70px 8%;
+}
 
+.projects-hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.projects-hero p {
+    color: #e5e9ef;
+    font-size: 17px;
+}
+
+.projects-intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.projects-intro h2 {
+    color: #071d35;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.projects-intro p {
+    color: #647184;
+}
+
+.projects-gallery {
+    padding: 30px 8% 85px;
+    background: #f5f7fa;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info span {
+    color: #c18c19;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-info h3 {
+    color: #071d35;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.project-info p {
+    color: #647184;
+    font-size: 15px;
+}
+
+.projects-cta {
+    background: #071d35;
+    color: #fff;
+    text-align: center;
+    padding: 75px 8%;
+}
+
+.projects-cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.projects-cta p {
+    color: #e0e5eb;
+    margin-bottom: 25px;
+}
+
+/* CONTACT PAGE */
+.contact-hero {
+    background: #071d35;
+    color: #fff;
+    text-align: center;
+    padding: 85px 8%;
+}
+
+.contact-hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.contact-hero p {
+    color: #e0e5eb;
+}
+
+.contact-section {
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #071d35;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #647184;
+    margin-bottom: 18px;
+}
+
+.contact-info a {
+    color: #b38319;
+    font-weight: bold;
+}
+
+.contact-form {
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dce2e9;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
 
     header {
-        padding: 0 5%;
+        padding: 15px 5%;
     }
 
     .hero {
@@ -416,7 +587,9 @@ footer p {
     .values-grid,
     .mission-vision,
     .services-grid,
-    .about-intro {
+    .about-intro,
+    .projects-gallery,
+    .contact-section {
         grid-template-columns: 1fr;
     }
 
@@ -427,12 +600,31 @@ footer p {
         padding: 60px 7%;
     }
 
+    .about-intro,
+    .mission-vision,
+    .services-grid,
+    .projects-gallery,
+    .contact-section {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
     .about-image img {
         height: 260px;
     }
 
     .about-hero h1,
-    .services-hero h1 {
+    .services-hero h1,
+    .projects-hero h1,
+    .contact-hero h1 {
         font-size: 34px;
+    }
+
+    .project-card img {
+        height: 230px;
+    }
+
+    .contact-form {
+        padding: 22px;
     }
 }
