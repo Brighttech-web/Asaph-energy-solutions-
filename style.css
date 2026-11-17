@@ -4,8 +4,6 @@
    MAIN WEBSITE STYLESHEET
 ================================= */
 
-/* GENERAL SETTINGS */
-
 * {
     margin: 0;
     padding: 0;
@@ -19,135 +17,137 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
-    color: #172638;
+    color: #263445;
     line-height: 1.7;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
 
 /* =================================
-   HEADER
+   HEADER AND NAVIGATION
 ================================= */
 
-.header {
-    width: 100%;
-    min-height: 85px;
-    padding: 15px 7%;
+header {
     background: #ffffff;
+    min-height: 80px;
+    padding: 15px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .logo {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.logo-main {
     color: #071d35;
-    font-size: 23px;
-    font-weight: 800;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.2;
     letter-spacing: 1px;
 }
 
-.logo-sub {
+.logo span {
+    display: block;
     color: #d9a326;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 5px;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
-
-
-/* NAVIGATION MENU */
 
 .menu {
     position: relative;
 }
 
 .menu-toggle {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
     list-style: none;
-    border: 1px solid #e5e9ef;
-    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #071d35;
 }
 
 .menu-toggle::-webkit-details-marker {
     display: none;
 }
 
-.menu-toggle span {
-    width: 21px;
-    height: 2px;
-    background: #071d35;
-    border-radius: 3px;
-}
-
-.navigation {
+.menu nav,
+.menu .nav-links {
     position: absolute;
-    top: 55px;
     right: 0;
-    width: 210px;
+    top: 45px;
     background: #ffffff;
-    padding: 12px;
-    border-radius: 7px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    width: 220px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 12px;
 }
 
-.navigation a {
-    display: block;
-    padding: 11px 13px;
+.menu nav a,
+.menu .nav-links a {
     color: #071d35;
-    font-size: 14px;
     font-weight: 600;
-    border-radius: 4px;
+    padding: 8px;
     transition: 0.3s;
 }
 
-.navigation a:hover {
-    background: #f0f4f8;
-    color: #c99420;
+.menu nav a:hover,
+.menu .nav-links a:hover {
+    color: #d9a326;
 }
 
+/* =================================
+   BUTTONS
+================================= */
+
+.btn,
+.button,
+.hero a,
+.cta a {
+    display: inline-block;
+    background: #d9a326;
+    color: #071d35;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.button:hover,
+.hero a:hover,
+.cta a:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
 
 /* =================================
-   HERO SECTION
+   HOMEPAGE HERO
 ================================= */
 
 .hero {
     min-height: 570px;
-    padding: 100px 8%;
+    background:
+        linear-gradient(rgba(4,20,38,0.76), rgba(4,20,38,0.76)),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5, 24, 45, 0.88),
-            rgba(5, 24, 45, 0.38)
-        ),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85");
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding: 70px 8%;
     color: #ffffff;
 }
 
@@ -155,264 +155,292 @@ a {
     max-width: 650px;
 }
 
-.hero-label {
-    color: #f5bd45;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
 .hero h1 {
-    font-size: clamp(40px, 6vw, 65px);
-    font-weight: 800;
+    font-size: clamp(36px, 5vw, 58px);
     line-height: 1.15;
-    margin-bottom: 23px;
-    color: #ffffff;
-}
-
-.hero h1 span {
-    color: #f5bd45;
-}
-
-.hero-description {
-    max-width: 510px;
-    color: #edf2f7;
-    font-size: 17px;
-    margin-bottom: 32px;
-}
-
-
-/* GOLD BUTTON */
-
-.primary-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px 25px;
-    background: #f2b735;
-    color: #071d35;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.primary-button:hover {
-    background: #ffffff;
-    transform: translateY(-3px);
-}
-
-
-/* =================================
-   INTRODUCTION SECTION
-================================= */
-
-.introduction {
-    padding: 90px 8%;
-    text-align: center;
-    max-width: 1050px;
-    margin: auto;
-}
-
-.section-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    color: #c99420;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
-.section-label span {
-    width: 25px;
-    height: 2px;
-    background: #d9a326;
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #eeeeee;
 }
-
-.introduction h2 {
-    color: #071d35;
-    font-size: clamp(30px, 4vw, 43px);
-    line-height: 1.25;
-    margin-bottom: 22px;
-}
-
-.introduction p {
-    max-width: 650px;
-    margin: auto;
-    color: #687789;
-    font-size: 16px;
-}
-
 
 /* =================================
-   FEATURED SERVICES
+   HOMEPAGE INTRODUCTION
 ================================= */
 
-.featured-services {
-    padding: 80px 8%;
-    background: #f4f6f9;
+.intro,
+.home-intro {
+    padding: 85px 8%;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.intro h2,
+.home-intro h2 {
+    color: #071d35;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.intro p,
+.home-intro p {
+    color: #647184;
+}
+
+/* =================================
+   HOMEPAGE SERVICES
+================================= */
+
+.services-preview {
+    padding: 70px 8%;
+    background: #f5f7fa;
     text-align: center;
 }
 
-.services-heading p {
-    color: #c99420;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.services-heading h2 {
+.services-preview h2 {
     color: #071d35;
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    margin-bottom: 35px;
 }
 
-.service-grid {
+.service-cards,
+.services-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    max-width: 1100px;
-    margin: auto;
 }
 
 .service-card {
     background: #ffffff;
-    padding: 40px 20px;
-    border-radius: 8px;
-    border: 1px solid #e9edf2;
-    box-shadow: 0 5px 20px rgba(7, 29, 53, 0.04);
+    padding: 30px 22px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     transition: 0.3s;
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 28px rgba(7, 29, 53, 0.10);
-}
-
-.service-icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 20px;
-    color: #c99420;
-}
-
-.service-icon svg {
-    width: 100%;
-    height: 100%;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
 }
 
 .service-card h3 {
     color: #071d35;
-    font-size: 17px;
+    margin-bottom: 12px;
 }
 
-.services-link {
-    margin-top: 40px;
+.service-card p {
+    color: #647184;
 }
-
-.secondary-button {
-    display: inline-block;
-    color: #071d35;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #d9a326;
-    padding-bottom: 5px;
-    transition: 0.3s;
-}
-
-.secondary-button:hover {
-    color: #c99420;
-}
-
 
 /* =================================
-   CONTACT BANNER
+   ABOUT PAGE
 ================================= */
 
-.home-contact {
-    padding: 80px 8%;
-    text-align: center;
+.about-hero {
     background: #071d35;
     color: #ffffff;
+    text-align: center;
+    padding: 85px 8%;
 }
 
-.home-contact > p {
-    color: #f5bd45;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.about-hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.about-hero p {
+    color: #e0e5eb;
+}
+
+.about-intro {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    color: #071d35;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #647184;
     margin-bottom: 15px;
 }
 
-.home-contact h2 {
-    font-size: clamp(26px, 4vw, 38px);
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.3;
+/* Mission and Vision */
+
+.mission-vision {
+    padding: 70px 8%;
+    background: #f5f7fa;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
+.mission-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    border-left: 4px solid #d9a326;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.mission-card h3 {
+    color: #071d35;
+    margin-bottom: 12px;
+}
+
+/* Core Values */
+
+.core-values {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.core-values h2 {
+    color: #071d35;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    padding: 28px;
+    background: #f5f7fa;
+    border-radius: 10px;
+}
+
+.value-card h3 {
+    color: #071d35;
+    margin-bottom: 10px;
+}
+
+/* =================================
+   SERVICES PAGE
+================================= */
+
+.services-hero {
+    background:
+        linear-gradient(rgba(4,20,38,0.80), rgba(4,20,38,0.80)),
+        url("https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 8%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.services-hero p {
+    color: #eeeeee;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 8%;
+}
+
+.services-intro h2 {
+    color: #071d35;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.services-grid {
+    padding: 30px 8% 85px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.services-grid .service-card {
+    padding: 35px;
+    border: 1px solid #edf0f4;
+}
+
+.service-icon {
+    font-size: 35px;
+    color: #d9a326;
+    margin-bottom: 15px;
+}
+
+.services-cta {
+    background: #071d35;
+    color: #ffffff;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.services-cta h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.services-cta p {
+    margin-bottom: 25px;
+}
+
+/* =================================
+   GENERAL CALL TO ACTION
+================================= */
+
+.cta {
+    background: #071d35;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 8%;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
 
 /* =================================
    FOOTER
 ================================= */
 
-.footer {
-    padding: 45px 8% 25px;
+footer {
     background: #041426;
-    color: #cbd5e1;
-    text-align: center;
-}
-
-.footer-brand {
     color: #ffffff;
-    font-size: 19px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+    text-align: center;
+    padding: 30px 8%;
 }
 
-.footer > p {
-    font-size: 13px;
-    margin-bottom: 20px;
+footer p {
+    color: #cbd3dc;
+    font-size: 14px;
 }
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 25px 0;
-}
-
-.footer-links a {
-    color: #cbd5e1;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #f5bd45;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding-top: 20px;
-    font-size: 12px;
-}
-
-.footer .footer-tagline {
-    color: #f5bd45;
-    font-size: 12px;
-    margin-top: 12px;
-}
-
 
 /* =================================
    MOBILE RESPONSIVENESS
@@ -420,73 +448,47 @@ a {
 
 @media (max-width: 768px) {
 
-    .header {
-        min-height: 75px;
-        padding: 12px 5%;
-    }
-
-    .logo-main {
-        font-size: 19px;
+    header {
+        padding: 15px 5%;
     }
 
     .hero {
-        min-height: 520px;
-        padding: 75px 7%;
-        background-position: 55% center;
+        min-height: 480px;
+        padding: 60px 7%;
     }
 
     .hero h1 {
-        font-size: 43px;
+        font-size: 38px;
     }
 
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .introduction {
-        padding: 70px 7%;
-    }
-
-    .featured-services {
-        padding: 65px 7%;
-    }
-
-    .services-heading h2 {
-        font-size: 30px;
-    }
-
-    .service-grid {
+    .service-cards,
+    .services-cards,
+    .values-grid {
         grid-template-columns: 1fr;
-        gap: 18px;
     }
 
-    .service-card {
-        padding: 30px 20px;
+    .about-intro {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
     }
 
-    .home-contact {
-        padding: 65px 7%;
+    .mission-vision {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
     }
 
-    .footer-links {
-        gap: 15px;
-    }
-}
-
-
-@media (max-width: 380px) {
-
-    .hero h1 {
-        font-size: 36px;
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 7% 60px;
     }
 
-    .primary-button {
-        padding: 13px 17px;
-        font-size: 11px;
+    .about-hero h1,
+    .services-hero h1 {
+        font-size: 34px;
     }
 
-    .logo-main {
-        font-size: 17px;
+    .about-image img {
+        height: 260px;
     }
 
 }
