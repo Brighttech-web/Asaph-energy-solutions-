@@ -1,8 +1,8 @@
 
-/* =================================
+/* =====================================
    ASAPH ENERGY SOLUTIONS
-   MAIN WEBSITE STYLESHEET
-================================= */
+   COMPLETE WEBSITE STYLESHEET
+===================================== */
 
 * {
     margin: 0;
@@ -16,54 +16,42 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
     color: #263445;
+    background: #fff;
     line-height: 1.7;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-button {
-    cursor: pointer;
-}
-
-/* =================================
-   HEADER AND NAVIGATION
-================================= */
+/* HEADER */
 
 header {
-    background: #ffffff;
-    min-height: 80px;
-    padding: 15px 7%;
+    height: 85px;
+    padding: 0 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
     position: relative;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
 }
 
 .logo {
-    color: #071d35;
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 800;
+    color: #071d35;
     line-height: 1.2;
     letter-spacing: 1px;
 }
 
 .logo span {
     display: block;
+    font-size: 11px;
+    letter-spacing: 4px;
     color: #d9a326;
-    font-size: 12px;
-    letter-spacing: 3px;
 }
 
 .menu {
@@ -73,82 +61,72 @@ header {
 .menu-toggle {
     list-style: none;
     cursor: pointer;
-    font-size: 28px;
     color: #071d35;
+    font-size: 29px;
 }
 
 .menu-toggle::-webkit-details-marker {
     display: none;
 }
 
-.menu nav,
-.menu .nav-links {
+.menu nav {
     position: absolute;
+    top: 48px;
     right: 0;
-    top: 45px;
-    background: #ffffff;
     width: 220px;
+    background: #fff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
-.menu nav a,
-.menu .nav-links a {
+.menu nav a {
     color: #071d35;
+    padding: 9px;
     font-weight: 600;
-    padding: 8px;
-    transition: 0.3s;
+    transition: .3s;
 }
 
-.menu nav a:hover,
-.menu .nav-links a:hover {
+.menu nav a:hover {
     color: #d9a326;
+    background: #f5f7fa;
 }
 
-/* =================================
-   BUTTONS
-================================= */
+/* BUTTONS */
 
-.btn,
-.button,
-.hero a,
-.cta a {
+.btn {
     display: inline-block;
+    padding: 13px 27px;
     background: #d9a326;
     color: #071d35;
-    padding: 13px 25px;
-    border-radius: 5px;
     font-weight: bold;
-    transition: 0.3s;
+    border-radius: 5px;
+    transition: .3s;
 }
 
-.btn:hover,
-.button:hover,
-.hero a:hover,
-.cta a:hover {
-    background: #ffffff;
-    transform: translateY(-2px);
+.btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
 }
 
-/* =================================
-   HOMEPAGE HERO
-================================= */
+/* HOMEPAGE HERO */
 
 .hero {
     min-height: 570px;
-    background:
-        linear-gradient(rgba(4,20,38,0.76), rgba(4,20,38,0.76)),
-        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85");
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 8%;
-    color: #ffffff;
+    padding: 80px 8%;
+    color: #fff;
+
+    background:
+        linear-gradient(rgba(4,20,38,.75), rgba(4,20,38,.75)),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
@@ -156,95 +134,120 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(36px, 5vw, 58px);
+    font-size: clamp(38px, 5vw, 60px);
     line-height: 1.15;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .hero p {
     font-size: 18px;
+    color: #e5e9ef;
     margin-bottom: 30px;
-    color: #eeeeee;
+    max-width: 550px;
 }
 
-/* =================================
-   HOMEPAGE INTRODUCTION
-================================= */
+/* HOMEPAGE INTRO */
 
-.intro,
-.home-intro {
-    padding: 85px 8%;
-    text-align: center;
+.intro {
     max-width: 1000px;
     margin: auto;
+    padding: 85px 8%;
+    text-align: center;
 }
 
-.intro h2,
-.home-intro h2 {
+.intro h2 {
     color: #071d35;
     font-size: 32px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.intro p,
-.home-intro p {
+.intro p {
     color: #647184;
 }
 
-/* =================================
-   HOMEPAGE SERVICES
-================================= */
+/* HOMEPAGE SERVICES */
 
 .services-preview {
-    padding: 70px 8%;
-    background: #f5f7fa;
+    padding: 80px 8%;
     text-align: center;
+    background: #f5f7fa;
 }
 
 .services-preview h2 {
     color: #071d35;
     font-size: 32px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
-.service-cards,
-.services-cards {
+.service-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
 .service-card {
-    background: #ffffff;
-    padding: 30px 22px;
+    background: #fff;
+    padding: 35px 25px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    transition: .3s;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
 }
 
 .service-card h3 {
     color: #071d35;
     margin-bottom: 12px;
+    font-size: 21px;
 }
 
 .service-card p {
     color: #647184;
 }
 
-/* =================================
-   ABOUT PAGE
-================================= */
+/* CALL TO ACTION */
+
+.cta {
+    background: #071d35;
+    color: #fff;
+    text-align: center;
+    padding: 75px 8%;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    color: #e0e5eb;
+}
+
+/* FOOTER */
+
+footer {
+    background: #041426;
+    color: #fff;
+    text-align: center;
+    padding: 28px 8%;
+}
+
+footer p {
+    font-size: 14px;
+    color: #cbd3dc;
+}
+
+/* ABOUT PAGE */
 
 .about-hero {
     background: #071d35;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
-    padding: 85px 8%;
+    padding: 90px 8%;
 }
 
 .about-hero h1 {
@@ -252,16 +255,12 @@ header {
     margin-bottom: 12px;
 }
 
-.about-hero p {
-    color: #e0e5eb;
-}
-
 .about-intro {
     padding: 80px 8%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     gap: 45px;
+    align-items: center;
 }
 
 .about-image img {
@@ -282,30 +281,26 @@ header {
     margin-bottom: 15px;
 }
 
-/* Mission and Vision */
-
 .mission-vision {
-    padding: 70px 8%;
     background: #f5f7fa;
+    padding: 75px 8%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
 .mission-card {
-    background: #ffffff;
+    background: #fff;
     padding: 35px;
-    border-radius: 10px;
     border-left: 4px solid #d9a326;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
 }
 
 .mission-card h3 {
     color: #071d35;
     margin-bottom: 12px;
 }
-
-/* Core Values */
 
 .core-values {
     padding: 80px 8%;
@@ -325,9 +320,9 @@ header {
 }
 
 .value-card {
-    padding: 28px;
     background: #f5f7fa;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 8px;
 }
 
 .value-card h3 {
@@ -335,19 +330,17 @@ header {
     margin-bottom: 10px;
 }
 
-/* =================================
-   SERVICES PAGE
-================================= */
+/* SERVICES PAGE */
 
 .services-hero {
     background:
-        linear-gradient(rgba(4,20,38,0.80), rgba(4,20,38,0.80)),
+        linear-gradient(rgba(4,20,38,.8), rgba(4,20,38,.8)),
         url("https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=85");
     background-size: cover;
     background-position: center;
-    padding: 100px 8%;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
+    padding: 100px 8%;
 }
 
 .services-hero h1 {
@@ -355,15 +348,11 @@ header {
     margin-bottom: 15px;
 }
 
-.services-hero p {
-    color: #eeeeee;
-}
-
 .services-intro {
     text-align: center;
     max-width: 850px;
     margin: auto;
-    padding: 65px 8%;
+    padding: 70px 8%;
 }
 
 .services-intro h2 {
@@ -392,9 +381,9 @@ header {
 
 .services-cta {
     background: #071d35;
-    color: #ffffff;
-    padding: 65px 8%;
+    color: #fff;
     text-align: center;
+    padding: 70px 8%;
 }
 
 .services-cta h2 {
@@ -406,50 +395,12 @@ header {
     margin-bottom: 25px;
 }
 
-/* =================================
-   GENERAL CALL TO ACTION
-================================= */
-
-.cta {
-    background: #071d35;
-    color: #ffffff;
-    text-align: center;
-    padding: 70px 8%;
-}
-
-.cta h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    margin-bottom: 25px;
-}
-
-/* =================================
-   FOOTER
-================================= */
-
-footer {
-    background: #041426;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 8%;
-}
-
-footer p {
-    color: #cbd3dc;
-    font-size: 14px;
-}
-
-/* =================================
-   MOBILE RESPONSIVENESS
-================================= */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 768px) {
 
     header {
-        padding: 15px 5%;
+        padding: 0 5%;
     }
 
     .hero {
@@ -458,37 +409,30 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 39px;
     }
 
     .service-cards,
-    .services-cards,
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .values-grid,
+    .mission-vision,
+    .services-grid,
     .about-intro {
         grid-template-columns: 1fr;
-        padding: 55px 7%;
     }
 
-    .mission-vision {
-        grid-template-columns: 1fr;
-        padding: 55px 7%;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        padding: 25px 7% 60px;
-    }
-
-    .about-hero h1,
-    .services-hero h1 {
-        font-size: 34px;
+    .intro,
+    .services-preview,
+    .cta,
+    .core-values {
+        padding: 60px 7%;
     }
 
     .about-image img {
         height: 260px;
     }
 
+    .about-hero h1,
+    .services-hero h1 {
+        font-size: 34px;
+    }
 }
