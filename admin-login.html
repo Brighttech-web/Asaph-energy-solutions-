@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="index.html">View Website</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="auth-container">
+
+    <section class="auth-card">
+
+        <div class="admin-login-icon">🔐</div>
+
+        <h1>Administrator Login</h1>
+
+        <p>
+            Welcome to the Asaph Energy Solutions
+            administration portal.
+        </p>
+
+        <form id="adminLoginForm">
+
+            <label for="adminEmail">Administrator Email</label>
+
+            <input
+                type="email"
+                id="adminEmail"
+                name="email"
+                placeholder="Enter administrator email"
+                required
+            >
+
+            <label for="adminPassword">Password</label>
+
+            <input
+                type="password"
+                id="adminPassword"
+                name="password"
+                placeholder="Enter administrator password"
+                required
+            >
+
+            <button type="submit">Access Dashboard</button>
+
+            <p id="adminLoginMessage"></p>
+
+        </form>
+
+        <div class="auth-links">
+            <a href="index.html">Return to Website</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Administration Portal</p>
+        <p class="copyright">© 2026 Asaph Energy Solutions.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
