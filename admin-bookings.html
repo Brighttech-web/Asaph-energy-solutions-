@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointments | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-products.html">Products</a>
+        <a href="admin-orders.html">Orders</a>
+        <a href="index.html">View Store</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+        <h1>Manage Appointments</h1>
+        <p>Review and manage customer installation and consultation requests.</p>
+    </section>
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <h3>Total Appointments</h3>
+            <p id="totalBookings">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Pending Requests</h3>
+            <p id="pendingBookings">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Approved</h3>
+            <p id="approvedBookings">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Completed</h3>
+            <p id="completedBookings">0</p>
+        </div>
+
+    </section>
+
+    <section class="admin-booking-list">
+
+        <h2>Customer Appointment Requests</h2>
+
+        <div class="admin-filter">
+
+            <label for="bookingStatusFilter">Filter by status:</label>
+
+            <select id="bookingStatusFilter">
+                <option value="all">All Appointments</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+        </div>
+
+        <div class="admin-table-container">
+
+            <table class="admin-table">
+
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                        <th>Service</th>
+                        <th>Location</th>
+                        <th>Preferred Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminBookingsTable">
+
+                    <tr>
+                        <td colspan="8">
+                            Appointment requests will appear here.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Appointment Management Centre</p>
+        <p class="copyright">© 2026 Asaph Energy Solutions.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
