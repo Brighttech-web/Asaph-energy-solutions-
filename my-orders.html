@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="cart.html">🛒 Cart</a>
+        <a href="login.html">Account</a>
+    </div>
+</header>
+
+<main class="orders-container">
+
+    <section class="orders-banner">
+        <h1>My Orders</h1>
+        <p>View your purchases and track your order progress.</p>
+    </section>
+
+    <section class="orders-content">
+
+        <div class="orders-heading">
+            <h2>Your Order History</h2>
+
+            <select id="myOrderFilter">
+                <option value="all">All Orders</option>
+                <option value="Pending">Pending</option>
+                <option value="Processing">Processing</option>
+                <option value="Shipped">Shipped</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+        </div>
+
+        <div class="orders-table-container">
+
+            <table class="orders-table">
+
+                <thead>
+                    <tr>
+                        <th>Order Number</th>
+                        <th>Product</th>
+                        <th>Order Date</th>
+                        <th>Total</th>
+                        <th>Payment</th>
+                        <th>Order Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody id="myOrdersTable">
+
+                    <tr>
+                        <td colspan="7">
+                            Your orders will appear here after you make a purchase.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="orders-empty">
+            <h3>No Orders Yet</h3>
+            <p>You haven't placed any orders yet.</p>
+            <a href="products.html">Explore Products</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Connecting people to reliable solar energy solutions.</p>
+        <p class="copyright">
+            © 2026 Asaph Energy Solutions. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
