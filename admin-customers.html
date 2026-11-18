@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-products.html">Products</a>
+        <a href="admin-orders.html">Orders</a>
+        <a href="index.html">View Store</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+        <h1>Manage Customers</h1>
+        <p>View customer accounts and their registration information.</p>
+    </section>
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <h3>Total Customers</h3>
+            <p id="customerCount">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Registered Today</h3>
+            <p id="newCustomersToday">0</p>
+        </div>
+
+    </section>
+
+    <section class="admin-customer-list">
+
+        <h2>Customer Accounts</h2>
+
+        <div class="customer-search">
+            <input
+                type="search"
+                id="customerSearch"
+                placeholder="Search by customer name or email..."
+            >
+        </div>
+
+        <div class="admin-table-container">
+
+            <table class="admin-table">
+
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Full Name</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>Registration Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminCustomersTable">
+
+                    <tr>
+                        <td colspan="6">
+                            Registered customers will appear here.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Customer Management Centre</p>
+        <p class="copyright">© 2026 Asaph Energy Solutions.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
