@@ -22,18 +22,21 @@
     <div class="header-actions">
         <a href="login.html">Login</a>
         <a href="cart.html">🛒 Cart</a>
-        <a href="register.html" class="signup-btn">Sign Up</a>
+        <a href="register.html">Sign Up</a>
     </div>
 </header>
 
 <section class="shop-banner">
     <h1>Explore Solar Products</h1>
-    <p>Find quality solar equipment from different marketplace sellers.</p>
+    <p>Discover reliable solar equipment from Asaph Energy Solutions.</p>
 </section>
 
 <section class="shop-search">
-    <input type="search" id="productSearch"
-    placeholder="Search for solar products...">
+    <input
+        type="search"
+        id="productSearch"
+        placeholder="Search solar panels, batteries, inverters..."
+    >
     <button onclick="searchProducts()">Search</button>
 </section>
 
@@ -52,65 +55,101 @@
     <div class="shop-main">
 
         <div class="shop-heading">
-            <h2>Available Products</h2>
-            <span>Our Marketplace</span>
+            <h2>Our Products</h2>
+            <span>Quality Solar Equipment</span>
         </div>
 
         <div class="shop-product-grid" id="shopProducts">
 
-            <div class="shop-product-card" data-category="panels">
-                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600"
-                alt="Solar panels">
+            <!-- SOLAR PANEL -->
+            <div class="shop-product-card"
+                 data-category="panels"
+                 data-name="Solar Panel">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600"
+                    alt="Solar panels"
+                >
 
                 <div class="shop-product-info">
                     <span class="product-category">Solar Panels</span>
                     <h3>Solar Panel</h3>
-                    <p>Quality solar energy panel.</p>
-                    <strong>₦ Price on request</strong>
-                    <small>Seller: Asaph Marketplace</small>
-                    <button onclick="addToCart('Solar Panel')">Add to Cart</button>
+                    <p>Quality solar energy panel for your power needs.</p>
+                    <strong>Price: Contact Us</strong>
+                    <small>Sold by Asaph Energy Solutions</small>
+
+                    <button onclick="addToCart('panel-001', 'Solar Panel', null)">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <div class="shop-product-card" data-category="inverters">
-                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600"
-                alt="Energy equipment">
+            <!-- SOLAR INVERTER -->
+            <div class="shop-product-card"
+                 data-category="inverters"
+                 data-name="Solar Inverter">
+
+                <img
+                    src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600"
+                    alt="Energy equipment"
+                >
 
                 <div class="shop-product-info">
                     <span class="product-category">Inverters</span>
                     <h3>Solar Inverter</h3>
                     <p>Reliable power conversion equipment.</p>
-                    <strong>₦ Price on request</strong>
-                    <small>Seller: Asaph Marketplace</small>
-                    <button onclick="addToCart('Solar Inverter')">Add to Cart</button>
+                    <strong>Price: Contact Us</strong>
+                    <small>Sold by Asaph Energy Solutions</small>
+
+                    <button onclick="addToCart('inverter-001', 'Solar Inverter', null)">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <div class="shop-product-card" data-category="batteries">
-                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600"
-                alt="Electrical equipment">
+            <!-- SOLAR BATTERY -->
+            <div class="shop-product-card"
+                 data-category="batteries"
+                 data-name="Solar Battery">
+
+                <img
+                    src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600"
+                    alt="Electrical equipment"
+                >
 
                 <div class="shop-product-info">
                     <span class="product-category">Batteries</span>
                     <h3>Solar Battery</h3>
-                    <p>Energy storage solution.</p>
-                    <strong>₦ Price on request</strong>
-                    <small>Seller: Asaph Marketplace</small>
-                    <button onclick="addToCart('Solar Battery')">Add to Cart</button>
+                    <p>Energy storage solution for solar systems.</p>
+                    <strong>Price: Contact Us</strong>
+                    <small>Sold by Asaph Energy Solutions</small>
+
+                    <button onclick="addToCart('battery-001', 'Solar Battery', null)">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
-            <div class="shop-product-card" data-category="accessories">
-                <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600"
-                alt="Energy technology">
+            <!-- SOLAR ACCESSORIES -->
+            <div class="shop-product-card"
+                 data-category="accessories"
+                 data-name="Solar Accessories">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600"
+                    alt="Solar accessories"
+                >
 
                 <div class="shop-product-info">
                     <span class="product-category">Accessories</span>
                     <h3>Solar Accessories</h3>
-                    <p>Useful solar installation accessories.</p>
-                    <strong>₦ Price on request</strong>
-                    <small>Seller: Asaph Marketplace</small>
-                    <button onclick="addToCart('Solar Accessories')">Add to Cart</button>
+                    <p>Useful accessories for solar installations.</p>
+                    <strong>Price: Contact Us</strong>
+                    <small>Sold by Asaph Energy Solutions</small>
+
+                    <button onclick="addToCart('accessory-001', 'Solar Accessories', null)">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
 
