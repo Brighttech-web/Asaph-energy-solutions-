@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="admin.html">Dashboard</a>
+        <a href="admin-products.html">Products</a>
+        <a href="index.html">View Store</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+        <h1>Manage Orders</h1>
+        <p>View customer purchases and manage order progress.</p>
+    </section>
+
+    <section class="admin-order-stats">
+
+        <div class="admin-stat-card">
+            <h3>All Orders</h3>
+            <p id="allOrdersCount">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Pending</h3>
+            <p id="pendingOrdersCount">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Processing</h3>
+            <p id="processingOrdersCount">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Completed</h3>
+            <p id="completedOrdersCount">0</p>
+        </div>
+
+    </section>
+
+    <section class="admin-order-list">
+
+        <h2>Customer Orders</h2>
+
+        <div class="admin-filter">
+
+            <label for="orderStatusFilter">Filter by status:</label>
+
+            <select id="orderStatusFilter">
+                <option value="all">All Orders</option>
+                <option value="Pending">Pending</option>
+                <option value="Processing">Processing</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+
+        </div>
+
+        <div class="admin-table-container">
+
+            <table class="admin-table">
+
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Total Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="adminOrdersTable">
+
+                    <tr>
+                        <td colspan="7">
+                            Customer orders will appear here.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Order Management Centre</p>
+        <p class="copyright">© 2026 Asaph Energy Solutions.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
