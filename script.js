@@ -1,11 +1,15 @@
-/* ==================================
+/* =====================================
    ASAPH ENERGY SOLUTIONS
-   SHOPPING CART SYSTEM
-================================== */
+   SHOPPING CART AND PRODUCT FUNCTIONS
+===================================== */
 
-// Get cart from browser storage
+// Get saved cart
 function getCart() {
-    return JSON.parse(localStorage.getItem("asaphCart")) || [];
+    try {
+        return JSON.parse(localStorage.getItem("asaphCart")) || [];
+    } catch {
+        return [];
+    }
 }
 
 // Save cart
@@ -26,7 +30,7 @@ function addToCart(id, name, price, image = "") {
         cart.push({
             id: id,
             name: name,
-            price: Number(price),
+            price: price === null ? null : Number(price),
             image: image,
             quantity: 1
         });
@@ -34,17 +38,15 @@ function addToCart(id, name, price, image = "") {
 
     saveCart(cart);
 
-    alert(name + " has been added to your cart!");
-
     updateCartCount();
+
+    alert(name + " has been added to your cart!");
 }
 
 // Remove product
 function removeFromCart(id) {
 
-    let cart = getCart();
-
-    cart = cart.filter(item => item.id !== id);
+    const cart = getCart().filter(item => item.id !== id);
 
     saveCart(cart);
 
@@ -80,7 +82,8 @@ function updateCartCount() {
     const cart = getCart();
 
     const totalItems = cart.reduce(
-        (total, item) => total + item.quantity, 0
+        (total, item) => total + item.quantity,
+        0
     );
 
     const cartCount = document.getElementById("cartCount");
@@ -93,73 +96,105 @@ function updateCartCount() {
 // Display cart
 function displayCart() {
 
-    const cartContainer = document.getElementById("cartItems");
+    const container = document.getElementById("cartItems");
 
-    if (!cartContainer) return;
+    if (!container) return;
 
     const cart = getCart();
 
     if (cart.length === 0) {
-        cartContainer.innerHTML = `
-            <p>Your shopping cart is empty.</p>
-            <a href="products.html">Browse Products</a>
+
+        container.innerHTML = `
+            <div class="empty-cart">
+                <h3>Your cart is empty</h3>
+                <p>Explore our solar products to get started.</p>
+                <a href="products.html">Browse Products</a>
+            </div>
         `;
 
-        updateCartTotals(0);
+        updateCartTotals(0, false);
         return;
     }
 
     let subtotal = 0;
+    let hasUnpricedProducts = false;
 
-    cartContainer.innerHTML = cart.map(item => {
+    container.innerHTML = cart.map(item => {
 
-        const itemTotal = item.price * item.quantity;
+        const itemTotal = item.price === null
+            ? null
+            : item.price * item.quantity;
 
-        subtotal += itemTotal;
+        if (itemTotal === null) {
+            hasUnpricedProducts = true;
+        } else {
+            subtotal += itemTotal;
+        }
 
         return `
             <div class="cart-item">
+
                 <h3>${escapeHTML(item.name)}</h3>
 
-                <p>Price: ₦${item.price.toLocaleString()}</p>
+                <p>
+                    Price:
+                    ${item.price === null
+                        ? "Contact for Price"
+                        : "₦" + item.price.toLocaleString()}
+                </p>
 
                 <p>
                     Quantity:
                     <button onclick="changeQuantity('${item.id}', -1)">−</button>
+
                     ${item.quantity}
+
                     <button onclick="changeQuantity('${item.id}', 1)">+</button>
                 </p>
 
-                <p>Subtotal: ₦${itemTotal.toLocaleString()}</p>
+                <p>
+                    Subtotal:
+                    ${itemTotal === null
+                        ? "Price to be confirmed"
+                        : "₦" + itemTotal.toLocaleString()}
+                </p>
 
                 <button onclick="removeFromCart('${item.id}')">
                     Remove
                 </button>
+
             </div>
         `;
 
     }).join("");
 
-    updateCartTotals(subtotal);
+    updateCartTotals(subtotal, hasUnpricedProducts);
 }
 
-// Update totals
-function updateCartTotals(subtotal) {
+// Update cart totals
+function updateCartTotals(subtotal, hasUnpricedProducts) {
 
     const subtotalElement = document.getElementById("cartSubtotal");
     const totalElement = document.getElementById("cartTotal");
 
+    const formattedSubtotal = "₦" + subtotal.toLocaleString();
+
     if (subtotalElement) {
-        subtotalElement.textContent = "₦" + subtotal.toLocaleString();
+        subtotalElement.textContent = hasUnpricedProducts
+            ? "Some prices are pending"
+            : formattedSubtotal;
     }
 
     if (totalElement) {
-        totalElement.textContent = "₦" + subtotal.toLocaleString();
+        totalElement.textContent = hasUnpricedProducts
+            ? "Contact us for final total"
+            : formattedSubtotal;
     }
 }
 
-// Safely display product names
+// Escape product names before displaying them
 function escapeHTML(value) {
+
     return String(value).replace(/[&<>"']/g, character => ({
         "&": "&amp;",
         "<": "&lt;",
@@ -169,8 +204,51 @@ function escapeHTML(value) {
     })[character]);
 }
 
-// Initialize cart when page loads
+// Filter products by category
+function filterProducts(category) {
+
+    const products = document.querySelectorAll(".shop-product-card");
+
+    products.forEach(product => {
+
+        const productCategory = product.dataset.category;
+
+        product.style.display =
+            category === "all" || productCategory === category
+                ? ""
+                : "none";
+
+    });
+}
+
+// Search products
+function searchProducts() {
+
+    const searchInput = document.getElementById("productSearch");
+
+    if (!searchInput) return;
+
+    const searchTerm = searchInput.value.toLowerCase().trim();
+
+    const products = document.querySelectorAll(".shop-product-card");
+
+    products.forEach(product => {
+
+        const productName = (
+            product.dataset.name || product.textContent
+        ).toLowerCase();
+
+        product.style.display = productName.includes(searchTerm)
+            ? ""
+            : "none";
+
+    });
+}
+
+// Initialize page functions
 document.addEventListener("DOMContentLoaded", function () {
+
     displayCart();
     updateCartCount();
+
 });
