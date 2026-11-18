@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Asaph Energy Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">ASAPH <span>ENERGY</span></div>
+
+    <nav>
+        <a href="index.html">View Store</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+    </nav>
+
+    <div class="header-actions">
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+
+<main class="admin-container">
+
+    <section class="admin-welcome">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the Asaph Energy Solutions management centre.</p>
+    </section>
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <h3>Total Products</h3>
+            <p id="totalProducts">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Total Orders</h3>
+            <p id="totalOrders">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Customers</h3>
+            <p id="totalCustomers">0</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <h3>Appointments</h3>
+            <p id="totalAppointments">0</p>
+        </div>
+
+    </section>
+
+    <section class="admin-management">
+
+        <h2>Store Management</h2>
+
+        <div class="admin-menu">
+
+            <a href="admin-products.html" class="admin-menu-card">
+                <span>📦</span>
+                <h3>Manage Products</h3>
+                <p>Add, edit and remove products.</p>
+            </a>
+
+            <a href="admin-orders.html" class="admin-menu-card">
+                <span>🛒</span>
+                <h3>Manage Orders</h3>
+                <p>View and update customer orders.</p>
+            </a>
+
+            <a href="admin-customers.html" class="admin-menu-card">
+                <span>👥</span>
+                <h3>Manage Customers</h3>
+                <p>View registered customers.</p>
+            </a>
+
+            <a href="admin-bookings.html" class="admin-menu-card">
+                <span>📅</span>
+                <h3>Manage Appointments</h3>
+                <p>View and manage service bookings.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>ASAPH ENERGY SOLUTIONS</h2>
+        <p>Admin Management Centre</p>
+        <p class="copyright">© 2026 Asaph Energy Solutions.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
